@@ -4,6 +4,7 @@ import Menu from './components/Menu/Menu'
 import MenuButton from './components/Menu/MenuButton'
 import MenuDropdown from './components/Menu/MenuDropdown'
 import MenuItem from './components/Menu/MenuItem'
+import Theme from './components/Theme/Theme'
 
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"]
@@ -30,6 +31,10 @@ function App() {
             ))}
           </MenuDropdown>
         </Menu>
+      </section>
+
+      <section>
+        <Theme />
       </section>
 
     </main>
