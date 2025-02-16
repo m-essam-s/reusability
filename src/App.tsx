@@ -5,6 +5,11 @@ import MenuButton from './components/Menu/MenuButton'
 import MenuDropdown from './components/Menu/MenuDropdown'
 import MenuItem from './components/Menu/MenuItem'
 import Theme from './components/Theme/Theme'
+import Toggle from './components/Toggle/Toggle'
+import ToggleButton from './components/Toggle/ToggleButton'
+import ToggleOff from './components/Toggle/ToggleOff'
+import ToggleOn from './components/Toggle/ToggleOn'
+import { BsStar, BsStarFill } from "react-icons/bs"
 
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"]
@@ -24,12 +29,21 @@ function App() {
           Dropdown Menu Component
         </h1>
         <Menu>
-          <MenuButton>Sports</MenuButton>
-          <MenuDropdown>
-            {sports.map(sport => (
-              <MenuItem key={sport}>{sport}</MenuItem>
-            ))}
-          </MenuDropdown>
+          <Toggle>
+            <ToggleButton>
+              <ToggleOn>
+                <MenuButton>Sports</MenuButton>
+                <MenuDropdown>
+                  {sports.map(sport => (
+                    <MenuItem key={sport}>{sport}</MenuItem>
+                  ))}
+                </MenuDropdown>
+              </ToggleOn>
+              <ToggleOff>
+                <MenuButton>Sports</MenuButton>
+              </ToggleOff>
+            </ToggleButton>
+          </Toggle>
         </Menu>
       </section>
 
@@ -37,6 +51,21 @@ function App() {
         <Theme />
       </section>
 
+      <section className='flex flex-col items-center bg-gray-100 p-10 rounded-md shadow-md gap-5'>
+        <h1 className='text-3xl'>
+          Toggle Component
+        </h1>
+        <Toggle>
+          <ToggleButton>
+            <ToggleOn>
+              <BsStarFill className="hight-[30px] width-[30px] cursor-pointer transition-color .5s ease-in-out user-select-none color-white" />
+            </ToggleOn>
+            <ToggleOff>
+              <BsStar className="hight-[30px] width-[30px] cursor-pointer transition-color .5s ease-in-out user-select-none color-white" />
+            </ToggleOff>
+          </ToggleButton>
+        </Toggle>
+      </section>
     </main>
   )
 }

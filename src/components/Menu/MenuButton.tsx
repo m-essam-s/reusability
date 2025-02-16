@@ -1,12 +1,7 @@
 import Button from "../Button/Button";
 
-interface MenuButtonProps {
-    children: React.ReactNode;
-    toggle?: () => void;
-}
-
-export default function MenuButton({ children, toggle }: MenuButtonProps) {
+export default function MenuButton({ children }: { children: React.ReactNode }) {
     return (
-        <Button onClick={toggle}>{children}</Button>
+        <Button>{children}</Button>
     )
 }
