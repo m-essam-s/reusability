@@ -4,13 +4,14 @@ import Menu from './components/Menu/Menu'
 import MenuButton from './components/Menu/MenuButton'
 import MenuDropdown from './components/Menu/MenuDropdown'
 import MenuItem from './components/Menu/MenuItem'
+import Star from './components/Star'
 import Theme from './components/Theme/Theme'
 import Toggle from './components/Toggle/Toggle'
 import ToggleButton from './components/Toggle/ToggleButton'
 import ToggleDisplay from './components/Toggle/ToggleDiisplay'
 import ToggleOff from './components/Toggle/ToggleOff'
 import ToggleOn from './components/Toggle/ToggleOn'
-// import { BsStar, BsStarFill } from "react-icons/bs"
+import { BsStar, BsStarFill } from "react-icons/bs"
 
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"]
@@ -57,20 +58,21 @@ function App() {
           Toggle Component
         </h1>
         <Toggle>
-          {/* <ToggleButton>
+          <ToggleButton>
             <ToggleOn>
               <BsStarFill className="hight-[30px] width-[30px] cursor-pointer transition-color .5s ease-in-out user-select-none color-white" />
             </ToggleOn>
             <ToggleOff>
               <BsStar className="hight-[30px] width-[30px] cursor-pointer transition-color .5s ease-in-out user-select-none color-white" />
             </ToggleOff>
-          </ToggleButton> */}
+          </ToggleButton>
           <ToggleButton>
             <ToggleDisplay>
               {(on: boolean) => <p>{on ? "Starred" : "Not Starred"}</p>}
             </ToggleDisplay>
           </ToggleButton>
         </Toggle>
+        <Star />
       </section>
     </main>
   )
